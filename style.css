@@ -1,6 +1,5 @@
 /* You can either copy the below and paste it between style tags on your HTML page, OR you can copy this to a file and name it .css and link it from your HTML page. */
 
-
 :root {
     --bg-color:#bdcbe2; /* light blue */
     --pg-color:#eaf3fc; /* very light blue */
@@ -29,7 +28,6 @@
     position:relative;
   }
   #outer {
-    border-left:4px dotted var(--accent-2);
     margin-left:100px;
   }
   nav {
