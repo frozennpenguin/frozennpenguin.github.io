@@ -1,0 +1,19 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="flex three demo">
+
+{% for post in posts %}
+    <div>
+        <article class="card">
+            <h2>{{ post.title }}</h2>
+            <p>
+                {{ post.content }}
+            </p>
+        </article>
+    </div>
+{% endfor%}
+</div>
+{% endblock %}
