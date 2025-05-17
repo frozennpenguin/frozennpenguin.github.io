@@ -62,6 +62,8 @@ i am an intp 5w4
 <div class='card' markdown='1'>
 <div class='head' markdown='1'>books</div>
 <div class='card_body' markdown='1'>
+currently i like sci-fi, dystopian, mystery, classics and short stories
+
 - and then there were none - agatha christie
 - a study in scarlet - arthur conan doyle
 - children of dune - frank herbert (has been in progress for over a year)

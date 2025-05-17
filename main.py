@@ -7,7 +7,7 @@ def read_file(page):
     return markdown_path(f'content/{page}.md', extras=['markdown-in-html', 'metadata'])
 
 def write_file(page, html):
-    with open(f'output/{page}.html', 'w') as file:
+    with open(f'public/{page}.html', 'w') as file:
         file.write(html)
 
 def render_jinja(temp_name, html):
@@ -30,9 +30,9 @@ nav = template.render(pages=pages)
 with open(f'templates/nav.html', 'w') as file:
     file.write(nav)
 
-if os.path.exists('output'):
-    rmtree('output', ignore_errors=True)
-os.makedirs('output')
+if os.path.exists('public'):
+    rmtree('public', ignore_errors=True)
+os.makedirs('public')
 
 for page in os.listdir('content'):
     page = os.path.splitext(page)[0]
