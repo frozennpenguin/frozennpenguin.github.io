@@ -1,38 +1,39 @@
 import os
-from pathlib import Path
-from markdown2 import markdown
+from markdown2 import markdown_path
+from shutil import rmtree
 from jinja2 import Environment, PackageLoader
 
-def get_files(page):
-    content = {}
-    for md in os.listdir(f'content/{page}'):
-        file_path = os.path.join(f'content/{page}', md)
-        with open(file_path, 'r') as file:
-            content[md] = markdown(file.read(), extras=['metadata'])
-    return content
+def read_file(page):
+    return markdown_path(f'content/{page}.md', extras=['markdown-in-html', 'metadata'])
 
-def load_temp():
-    env = Environment(loader=PackageLoader('main', 'templates'))
-    page_template = env.get_template('page.html')
-    return page_template
-
-#TODO make better
-def render_jinja(template, content):
-    data = [{'content':content[i], 'title':content[i].metadata['title']} for i in content]
-    page_html = template.render(posts=data)
-    return page_html
-
-def make_page(page):
-    content = get_files(page)
-    template = load_temp()
-    html = render_jinja(template, content)
-    if not os.path.exists('output'):
-        os.makedirs('output')
+def write_file(page, html):
     with open(f'output/{page}.html', 'w') as file:
         file.write(html)
 
-def build_site():
-    for page in os.listdir(f'content'):
-        make_page(page)
+def render_jinja(temp_name, html):
+    #load template
+    env = Environment(loader=PackageLoader('main', 'templates'))
+    template = env.get_template(f'{temp_name}.html')
 
-build_site()
+    return template.render(content=html, meta=html.metadata)
+
+def make_page(page):
+    content_html = read_file(page)
+    page_html = render_jinja('default', content_html)
+    write_file(page, page_html)
+
+
+pages = [{'name': os.path.splitext(page)[0]} for page in os.listdir('content')]
+env = Environment(loader=PackageLoader('main', 'templates'))
+template = env.get_template('nav_temp.html')
+nav = template.render(pages=pages)
+with open(f'templates/nav.html', 'w') as file:
+    file.write(nav)
+
+if os.path.exists('output'):
+    rmtree('output', ignore_errors=True)
+os.makedirs('output')
+
+for page in os.listdir('content'):
+    page = os.path.splitext(page)[0]
+    make_page(page)
