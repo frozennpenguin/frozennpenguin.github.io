@@ -1,16 +1,20 @@
 :root {
-    --bg-color:#454b7a;
-    --pg-color:#393d60;
-    --accent:#1e1f32;
+    --bg-color:#181825;
+    --pg-color:#1e1e2e;
+    --accent:#6c7086;
+    --accent2: #26263c;
+    --txt-color: #a6adc8;
+    --color: rgb(30, 30, 46);
+    --dark: #13131c;
 }
 * {
     font-family: monospace;
-    font-size: 15px;
-    margin: 0px;
+    font-size: 14px;
     line-height: 1.7;
+    color: var(--txt-color);
 }
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--accent);
@@ -22,51 +26,58 @@ body{
     background-color: var(--bg-color);
     overflow-y: scroll;
 }
-
 .page{
-    width: 70%;
-    margin-left: 17%;
+    width: 80%;
+    margin: 30px 20%;
     overflow: auto;
 }
 
 .card{
-    background-color: var(--pg-color);
-    color: white;
-    border: 2px solid var(--accent);
-    margin: 30px;
+    border: 1px solid var(--accent);
+    box-shadow: 8px 8px #24243aa4;
+    position: relative;
 }
 
 .head{
-    background-color: #49517a;
+    background-color: #26263c;
     border: 1px solid var(--accent);
+    border: 1px solid #4c536e;
     padding: 10px 20px;
 }
 
+.head p{
+    margin: 0px;
+}
+
 .card_body{
-    padding: 20px;
+    background-color: #1e1e2ee6;
+    padding: 0px 20px;
     border: 1px solid var(--accent);
+    border: 1px solid #4c536e;
     overflow-y: scroll;
 }
 
 .side {
     position: fixed;
-    margin: 30px;
+    margin-left: 30px;
     width: 15%;
 }
 nav {
     padding: 5px;
-    background: var(--accent);
+    background: var(--pg-color);
+    border: 2px solid #4c536e;
+    box-shadow: 8px 8px #24243aa4;
 }
 
 nav a{
-    color: white;
+    border: 2px solid #4c536e;
     display: block;
     margin: 10px;
-    background: var(--pg-color);
+    background: var(--accent2);
     padding: 8px 16px;
     text-decoration: none;
 }
 
 nav a:hover {
-  background-color: #788194;
+  background-color: #30304b;
 }

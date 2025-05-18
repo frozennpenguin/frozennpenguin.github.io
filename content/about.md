@@ -3,9 +3,9 @@ title: about
 desc: what is this?
 ---
 
-<div class='card' markdown='1'">
+<div class='card' markdown='1'" style="width: 450px">
 <div class='head' markdown='1'>hello</div>
-<div class='card_body' markdown='1'>
+<div class='card_body' markdown='1' style="height: 270px">
 hi!
 
 i made a website :)
@@ -22,19 +22,20 @@ i am an intp 5w4
 - cats
 - manga
 - udon
+- rain
 
 # i am working on:
 
-- learning japanese
+- trying to learn japanese
 - learning cad?
 - more stuff probably (hopefully)
 - procrastinating
 </div>
 </div>
 
-<div class='card' markdown='1'>
+<div class='card' markdown='1' style="width: 550px; left:350px; top:-120px">
 <div class='head' markdown='1'>animanga</div>
-<div class='card_body' markdown='1'>
+<div class='card_body' markdown='1' style="height: 250px">
 # shows
 
 - death note
@@ -59,7 +60,7 @@ i am an intp 5w4
 </div>
 </div>
 
-<div class='card' markdown='1'>
+<div class='card' markdown='1' style="width: 700px; left: 140px; top: -140px; z-index:-1">
 <div class='head' markdown='1'>books</div>
 <div class='card_body' markdown='1'>
 currently i like sci-fi, dystopian, mystery, classics and short stories
