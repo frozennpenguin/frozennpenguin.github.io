@@ -17,10 +17,9 @@ i am an intp 5w4
 - coding
 - drawing/painting/art
 - robotics
-- reading wikipedia ariticles
+- wikipedia
 - reading books
 - cats
-- manga
 - udon
 - rain
 
@@ -41,6 +40,7 @@ i am an intp 5w4
 - death note
 - bungo stray dogs (manga)
 - tokyo ghoul (manga)
+- monster
 - attack on titan
 - demon slayer
 - jujustu kaisen
@@ -72,9 +72,14 @@ currently i like sci-fi, dystopian, mystery, classics and short stories
 - fahrenheit 451 - ray bradbury
 - 1984 - george orwell
 - 3 body problem series - cixin liu
-- (short story) i have no mouth but i must scream - harlan ellison
 - howls moving castle (1 and 2) - dianna wynne jones
 - another - yukito ayatsuji
 - (plus 11 light novels from bsd)
+
+short stories:
+
+- the egg - andy weir
+- i have no mouth but i must scream - harlan ellison
+- the monkey's paw - w.w. jacobs
 </div>
 </div>

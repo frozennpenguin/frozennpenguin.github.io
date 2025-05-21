@@ -8,8 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-    pages: write      # to deploy to Pages
-    id-token: write
+    contents: write      # to deploy to Pages
 
 jobs:
   # This workflow contains a single job called "build"
